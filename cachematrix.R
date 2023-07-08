@@ -30,8 +30,8 @@ cacheSolve <- function(x, ...) {
   if (!is.null(i)) {
     return(i)
   }
-  data <- x$get()
-  i <- solve(data, ...)
+  mat <- x$get()
+  i <- solve(mat, ...)
   x$setinverse(i)
   i
 }
